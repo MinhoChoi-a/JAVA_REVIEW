@@ -26,11 +26,27 @@ public class Practice {
         //Arrays.sort(object, Comparator)
         //Comparator, Comparable(default: ascending order)
 
+        //iterator
+
         //Set:Collection
         //Hash Set, Tree Set
+        Set set = new HashSet(); //overwrite duplicate data. for the instance, we need a overridded equals(), hashCode()
+        Set tset = new TreeSet(); //binary search tree
 
         //Map
-        //Hash Map
+        //Hash Map = updated version of HashSet
+        HashMap map = new HashMap();
+        map.put("key", "value");
+        TreeMap tmap = new TreeMap(); //using binary search tree
+
+        //Stream:Collection = supports various methods which be pipelined to produce the desired result
+        al.stream().sorted().forEach(System.out::println);
     }
 
 }
+
+//Strategy Design Pattern
+//make algorithm/behavior as a class and separate from the interface, so the inherited subClass can use the algorithm dynamically
+
+//Observer Design Pattern
+//help the object can be updated in a real time. we can make a thread using Runnable interface, and check the change of the state using PropertyChangeListener interface
